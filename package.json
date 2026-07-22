@@ -1,0 +1,11 @@
+{
+  "name": "anchor",
+  "version": "1.0.0",
+  "description": "Contract-first API spec and boilerplate generator",
+  "main": "lib/anchor.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/anchor.test.js"
+  },
+  "license": "MIT"
+}
