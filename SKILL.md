@@ -19,3 +19,13 @@ Generate stubs from contract definition:
 ```bash
 node C:/Users/GdC/.gemini/config/skills/anchor/lib/anchor.js --spec "examples/api.json"
 ```
+
+
+---
+
+## ⚡ Spark Breakthrough Enhancement
+
+- **Feature**: **Zero-Code Live API Mock Sandbox**
+- **Description**: Auto-generates mock server endpoints with dynamic payload generators and local Gemma LLM synthesis.
+- **Synergy**: Integrated with `sieve` (data validation) & `keel` (trust boundaries).
+- **Framework**: Applied via the `spark` 4-Lens Lateral Ideation Engine.
