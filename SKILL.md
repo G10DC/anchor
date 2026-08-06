@@ -17,7 +17,7 @@ Contract-First API Spec & Boilerplate Generator. Anchor enforces a "contract-fir
 
 Generate stubs from contract definition:
 ```bash
-node C:/Users/GdC/.gemini/config/skills/anchor/lib/anchor.js --spec "examples/api.json"
+node lib/anchor.js --spec "examples/api.json"
 ```
 
 
