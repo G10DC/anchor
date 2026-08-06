@@ -1,6 +1,11 @@
 ---
 name: anchor
-description: Contract-first API spec and boilerplate generator. Parses OpenAPI / schema definitions to generate server route stubs, client SDK wrappers, and payload validators.
+description: >-
+  Contract-first API spec and boilerplate generator. Parses OpenAPI and schema
+  definitions to generate server route stubs, client SDK wrappers, and payload
+  validators. Use when bootstrapping a new API from an existing OpenAPI spec or
+  generating typed client bindings. Never hand-write route stubs an OpenAPI spec
+  already defines; never use for runtime API discovery -- use strata instead.
 ---
 
 # ⚓ Anchor
