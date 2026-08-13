@@ -1,5 +1,6 @@
 ---
 name: anchor
+status: implemented
 description: >-
   Contract-first API spec and boilerplate generator. Parses OpenAPI and schema
   definitions to generate server route stubs, client SDK wrappers, and payload
@@ -25,22 +26,22 @@ Generate stubs from contract definition:
 node lib/anchor.js --spec "examples/api.json"
 ```
 
-
----
-
-## Spark Breakthrough Enhancement
-
-- **Feature**: **Zero-Code Live API Mock Sandbox**
-- **Description**: Auto-generates mock server endpoints with dynamic payload generators and local Gemma LLM synthesis.
-- **Synergy**: Integrated with `sieve` (data validation) & `keel` (trust boundaries).
-- **Framework**: Applied via the `spark` 4-Lens Lateral Ideation Engine.
-
+**Honest scope**: despite "Parses OpenAPI," it does not parse or validate an OpenAPI document —
+it reads `spec.endpoints` as a plain array of `{ method, path, summary, requiredFields, name }`
+objects directly. There is no `$ref` resolution, no schema-type generation, and no OpenAPI
+version handling. You (or a real OpenAPI parser upstream) must already have flattened the spec
+into that endpoint-list shape before calling this.
 
 ## When to use
 
-- Primary domain workflow execution as specified in frontmatter description.
-
+- You already have (or can easily produce) a flat list of `{ method, path, ... }` endpoint
+  objects and want boilerplate Express route stubs and a matching fetch-based client generated
+  from them, without hand-writing that repetitive code yourself.
 
 ## When NOT to use
 
-- Tasks outside declared skill scope or handled by specialized sibling skills.
+- **You have a real OpenAPI/Swagger document with `$ref`s, and need it resolved and validated,
+  not just its endpoint list echoed into stub code** — this does not parse OpenAPI; flatten it
+  yourself first, or use a real OpenAPI toolchain.
+- **You need runtime API discovery against a live service, not codegen from a static spec** →
+  use `strata` instead.
